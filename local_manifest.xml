@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<!-- Remote names -->
+	<remote name="lineage" fetch="https://github.com/LineageOS/" />
+	<remote name="thlg" fetch="https://github.com/TeamHackLG/" />
+        <remote name="leglg" fetch="https://github.com/LegacyLG/" />
+        <remote name="bucket" fetch="https://bitbucket.org" revision="master" />
+
+	<!-- Adreno STLPort -->
+	<project path="external/stlport" name="android_external_stlport" revision="cm-14.1" remote="lineage" />
+	<!-- MSM7x27a HAL -->
+        <project path="hardware/qcom/audio-caf/msm7x27a" name="android_hardware_qcom_audio" revision="cm-14.1-caf-7x27a" remote="leglg" />
+	<project path="hardware/qcom/display-caf/msm7x27a" name="android_hardware_qcom_display" revision="cm-14.1-caf-7x27a" remote="leglg" />
+	<project path="hardware/qcom/media-caf/msm7x27a" name="android_hardware_qcom_media" revision="cm-14.1-caf-7x27a" remote="leglg" />
+	<!-- RIL Legacy -->
+	<project path="hardware/ril-legacy" name="android_hardware_ril-legacy" revision="cm-14.1" remote="thlg" />
+	<!-- Common Project -->
+	<project path="kernel/lge/msm7x27a-common" name="android_kernel_lge_msm7x27a" revision="cm-14.1" remote="leglg" />
+	<project path="vendor/lge" name="proprietary_vendor_lge" revision="cm-14.1" remote="leglg" />
+	<project path="device/lge/msm7x27a-common" name="android_device_lge_msm7x27a-common" revision="cm-14.1" remote="thlg" />
+	<!-- First Generation devices -->
+	<project path="device/lge/p700" name="android_device_lge_p700" revision="cm-14.1" remote="thlg" />
+        <project path="device/lge/vee7" name="android_device_lge_vee7" revision="cm-14.1" remote="leglg" />
+	<!-- Huawei devices -->
+        <remote name="bucket" fetch="https://bitbucket.org" revision="master" />
+
+     <!-- Device Folders, Kernel & Proprietary BLOBS -->
+     <project path="vendor/huawei" name="CM13-Y300/proprietary_vendor_huawei" remote="github" revision="cm-13.0"/>
+     <project path="kernel/huawei/huawei-kernel-3.4" name="SlimLP-Y300/chil360-kernel" remote="github" revision="mm6.0"/>
+     <project path="device/huawei/msm7x27a-common" name="CM13-Y300/android_device_huawei_msm7x27a-common" remote="github" revision="cm-13.0"/>
+     <project path="device/huawei/u8833" name="CM13-Y300/android_device_huawei_u8833" remote="github" revision="cm-13.0"/>
+     <project path="device/huawei/u8951" name="CM13-Y300/android_device_huawei_u8951" remote="github" revision="cm-13.0"/>
+     <project path="device/huawei/u8825" name="CM13-Y300/android_device_huawei_u8825" remote="github" revision="cm-13.0"/>
+
+     <!-- WIFI -->
+     <project path="hardware/atheros/wifi/ath6kl-huawei" name="SlimLP-Y300/android_hardware_atheros_wifi_ath6kl-huawei" remote="github" revision="master" />
+     <project path="hardware/atheros/wlan" name="CM13-Y300/android_hardware_atheros_wlan" remote="github" revision="cm-13.0" />
+
+     <!-- GPS -->
+     <remove-project path="hardware/qcom/gps" name="hardware_qcom_gps" />
+     <project path="hardware/qcom/gps" name="CM13-Y300/android_hardware_qcom_gps" remote="github" revision="cm-13.0" />
+
+     <!-- QCOM Hardware -->
+     <!--project path="hardware/qcom/display-caf/msm7x27a" name="CM13-Y300/android_hardware_qcom_display-caf" remote="github" revision="cm-13.0" /-->
+     <!--project path="hardware/qcom/media-caf/msm7x27a" name="SlimLP-Y300/hardware_qcom_media" remote="github" revision="lp5.1" /-->
+
+     <!-- Stlport -->
+     <!--project path="external/stlport" name="CyanogenMod/android_external_stlport" remote="github" revision="cm-13.0" /-->
+
+	 <!-- UBERTC 4.9 kernel toolchain -->
+     <!--remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" remote="aosp" /-->
+     <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="UBERTC/arm-eabi-4.9" groups="pdk,linux,arm" remote="bucket"/>
+     <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="UBERTC/arm-linux-androideabi-4.8" groups="pdk,linux,arm" remote="bucket"/>
+</manifest>
